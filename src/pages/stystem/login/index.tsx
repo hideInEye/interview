@@ -5,7 +5,7 @@ import './index.less';
 
 export default () => {
   const login = useSelector((state: any) => state.login);
-  const { captcha, visible = false } = login;
+  const { captcha, visible = true } = login;
   const dispatch = useDispatch();
   const [form] = Form.useForm<FormInstance>();
 
