@@ -24,8 +24,9 @@ export default defineConfig({
     open: true,
     hmr: true,
     proxy: {
-      '/web': {
-        target: 'http://39.99.234.158:10088',
+      '/biz': {
+        target: 'https://480w8248y8.zicp.fun',
+        // target: 'http://39.99.234.158:10088',
         ws: true,
         changeOrigin: true,
       },

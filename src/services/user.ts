@@ -10,3 +10,10 @@ export const getCaptchaId = () => {
 export const getCaptcha = (params: string) => {
   return `/web/v1/pub/login/captcha?id=${params}`;
 };
+
+export const test = (params?: string) => {
+  return request({
+    url: '/biz/server/serverTime',
+    method: 'POST',
+  });
+};

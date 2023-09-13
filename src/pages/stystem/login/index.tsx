@@ -1,7 +1,10 @@
 import { Form, FormInstance, Button } from 'antd';
-import { useDispatch } from 'dva';
 import s from './index.less';
 import Login from '@/pages/components/login';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'dva';
+import './index.less';
+import { test } from '@/services/user';
 
 export default () => {
   const dispatch = useDispatch();
@@ -12,6 +15,11 @@ export default () => {
       type: 'login/login',
     })
   };
+
+  useEffect(() => {
+    test()
+  }, []);
+
   return (
     <div className={s.container}>
       <div className={s.login}>
